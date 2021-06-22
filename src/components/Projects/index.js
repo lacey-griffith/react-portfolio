@@ -9,10 +9,9 @@ const Projects = (project) => {
     return(
         <section>
             <h1>{currentProject.name}</h1>
-            <h4>DEPLOYED LINK</h4>
-            <h4>REPO LINK</h4>
+            <h4>DEPLOYED LINK:</h4>
+            <h4>REPO LINK: </h4>
             <p>{currentProject.description}</p>
-
         </section>
     )
 }
