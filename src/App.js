@@ -1,15 +1,17 @@
 import React from 'react';
 import About from "../src/components/AboutMe"
 import NavBar from "../src/components/NavBar"
+import Projects from "../src/components/Projects"
 import './App.css';
 import './index.css'
 
 function App() {
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar />
       <main>
-        <About></About>
+        <Projects />
+        <About />
       </main>
     </div>
   );
