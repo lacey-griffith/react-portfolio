@@ -4,11 +4,17 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: #4C5454;
-  --secondary: #FFEC51;
+  --background: #bad8e7;
+  --header: #bad8e7;
+
+  --primary: #354e4e;
+  --secondary: #46392a;
   --tertiary: #F67E7D;
-  --light: #75B09C;
-  --dark: #4C5454;
+  
+  /* header links not active */
+  /* main body text */
+  --light: #7b6d8d;
+
   --darker: #111111;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -33,7 +39,7 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: .1em;
-  background: var(--dark);
+  background: var(--background);
   color: var(--light);
   font-family: Arial, Helvetica, sans-serif;
 
@@ -91,7 +97,7 @@ a:hover {
 }
 
 header {
-  background: var(--dark);
+  background: var(--header);
 }
 
 header a {
@@ -134,10 +140,13 @@ form {
 input {
   font-size: 1rem;
   padding: 0.25rem;
-  border: 1px solid var(--dark);
+  border: 1px solid var(--background);
   outline: none;
   border-radius: 3px;
   transition: box-shadow 0.2s;
+}
+textarea {
+  margin-top: 2px;
 }
 
 input:focus {
