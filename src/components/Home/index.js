@@ -22,13 +22,14 @@ function Home(){
             case 'Contact':
                 return <Contact/>;
         //     // case 'Resume':
-        //     //     return <Resume/>
+        //     //     return <Resume/>;
+        default:
+            return
         }
     }
 
     return (
     <div> 
-        <h1>Home</h1>
         <NavBar currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         <div>
             {writePage(currentPage)}

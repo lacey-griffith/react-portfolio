@@ -4,7 +4,7 @@ function NavBar(props) {
 const navLinks = ['Home', 'About', 'Projects', 'Contact', 'Resume']
 
   return(
-      <ul>
+      <ul className='nav justify-content-center'>
           {navLinks.map(link => (
               <li className='nav-item' 
                 key={link}>

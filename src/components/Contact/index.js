@@ -14,20 +14,48 @@ function ContactForm(){
     }
 
     return(
-        <section>
-            <h1>Contact</h1>
+        <section className='my-5'>
+            <div className='container h-100 text-center'>
+                <div className='row h-100 justify-content-center align-items-center'>
+                    <div className='col-10 col-md-8 col-lg-6'>
+
+            <div className='p-2'>
+            <h1 id='about'>let's connect</h1>
+            <p>lacey.griffith04@gmail.com</p>
+            </div>
+
             <form id='contact-form' onSubmit={handleFormSubmit}>
-                <div>
-                    <input type='text' placeholder='Name' defaultValue={name} name='name' onChange={handleFormChanges}></input>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                <label for='name' className='d-none'>Name</label>
+                <input type='text' className='form-control' placeholder='Name' defaultValue={name} name='name' size='100' onChange={handleFormChanges}></input>
                 </div>
-                <div>
-                    <input type='text' placeholder='Email' defaultValue={email} name='email' onChange={handleFormChanges}></input>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                <label for='email' className='d-none'>Email</label>
+                <input type='text' className="form-control" placeholder='Email' defaultValue={email} name='email' onChange={handleFormChanges}/>
                 </div>
-                <div>
-                    <textarea name='message' rows='5' defaultValue={message} placeholder='Message' onChange={handleFormChanges}/>
+            </div>
+
+            <div class='form-group row'>
+                <div class='col-sm-10'>
+                <label for='message' className='d-none'>Message</label>
+                <textarea name='message' rows='5' defaultValue={message} placeholder='Message' onChange={handleFormChanges}/>
                 </div>
-            <button type='submit'>send</button>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
             </form>
+            
+                    </div>
+                </div>
+            </div>
         </section>
     )
 }
