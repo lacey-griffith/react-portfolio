@@ -1,31 +1,24 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 function NavBar(props) {
-    const {
-        navLinks = [],
-        setCurrentLink,
-        currentLink
-    } = props;
+const navLinks = ['Home', 'About', 'Projects', 'Contact', 'Resume']
 
-    useEffect(() => {
-        document.title = currentLink.name
-    }, [currentLink]);
-
-    return(
-        <header>
-            <nav>
-                <ul className='flex-row'>
-                {navLinks.map((link) => (
-            <li className={`mx-1 ${currentLink.name === link.name && 'navActive'}`} key={link.name}>
-              <span onClick={() => {setCurrentLink(link)}}>
-                {link.name}
-              </span>
-            </li>
+  return(
+      <ul>
+          {navLinks.map(link => (
+              <li className='nav-item' 
+                key={link}>
+                <a 
+                href={'#' + link.toLowerCase()}
+                onClick={() => props.setCurrentPage(link)}
+                className={ props.currentPage === link ? 'nav-link active' : 'nav-link'}
+                >
+                    {link}
+                    </a>
+              </li>
           ))}
-                </ul>
-            </nav>
-        </header>
-    )
+      </ul>
+  )
 };
 
 export default NavBar;

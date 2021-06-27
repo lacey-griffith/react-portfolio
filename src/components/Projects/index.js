@@ -1,17 +1,13 @@
 import React from 'react';
 
-const Projects = (project) => {
-    const currentProject = {
-        name: 'namaste fit',
-        description: 'yoga tracking api'
-    }
+const Projects = () => {
 
     return(
         <section>
-            <h1>{currentProject.name}</h1>
+            <h1>Project Name</h1>
             <h4>DEPLOYED LINK:</h4>
             <h4>REPO LINK: </h4>
-            <p>{currentProject.description}</p>
+            <p>Project Description</p>
         </section>
     )
 }
