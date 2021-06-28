@@ -11,16 +11,9 @@ main {
   --secondary: #46392a;
   --tertiary: #F67E7D;
   
-  /* header links not active */
-  /* main body text */
   --light: #7b6d8d;
-
+  --dark:#0e3041 ;
   --darker: #111111;
-  --error: rgb(228, 46, 1);
-  --spacing-one: calc(1rem * 0.5);
-  --spacing-two: calc(1rem);
-  --spacing-five: calc(2.5rem);
-
 }
 
 * {
@@ -42,44 +35,8 @@ body {
   background: var(--background);
   color: var(--light);
   font-family: Arial, Helvetica, sans-serif;
-
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  margin: 5px 0;
-  line-height: 1.25;
-}
-
-h1 {
-  font-size: 2.25rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
+ 
 
 p {
   font-size: 1.1rem;
@@ -87,21 +44,27 @@ p {
 }
 
 a {
-  color: var(--tertiary);
+  color: var(--dark) !important;
   text-decoration: none;
   font-weight: bold;
+	border-radius: 5px;
+	color: var(--primary);
+	font-weight: 600;
+	padding: 2px 4px;
+	margin-left: -2px;
+	margin-right: -2px;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--light) !important;
+}
+
+.active {
+color: var(--light) !important;
 }
 
 header {
   background: var(--header);
-}
-
-header a {
-  color: var(--light);
 }
 
 button {
@@ -120,37 +83,25 @@ button:hover {
   opacity: .8;
 }
 
-button[disabled] {
-  cursor: default;
-  opacity: .8;
-}
-
 img {
   max-width: 100%;
 }
 
-span[role="img"] {
-  cursor: default;
-}
-
 form {
-  width: 40%;
+  width: 125.5%;
 }
 
 input {
   font-size: 1rem;
   padding: 0.25rem;
-  border: 1px solid var(--background);
+  border: 1px solid var(--background) !important;
   outline: none;
   border-radius: 3px;
   transition: box-shadow 0.2s;
 }
-textarea {
-  margin-top: 2px;
-}
 
 input:focus {
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--secondary) !important;
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
@@ -167,10 +118,22 @@ nav  li {
 }
 
 textarea {
-	width: 600px;
-	height: 120px;
-	border: 3px solid #cccccc;
+  font-size: 1rem;
+	width: 100%;
+	height: 150px;
 	padding: 5px;
+  border: 1px solid var(--background) !important;
+  border-radius: 5px;
+  resize: none;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  padding-top: 30px;
 }
 
 .container {
@@ -250,35 +213,10 @@ textarea {
   cursor: pointer;
 }
 
-.modalBackdrop {
-	background: rgba(0, 0, 0, .65);
-	bottom: 0;
-	left: 0;
-	overflow: auto;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1;
-}
-
-.modalContainer {
-	background: var(--darker);
-	border-radius: 5px;
-	max-width: 100%;
-	margin: 50px auto;
-	padding: 15px;
-	width: 960px;
-}
-
-.modalTitle {
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom: 25px;
-}
 
 button {
-	background: var(--primary);
-	border: 0;
+	background: var(--primary) !important;
+	border: none !important;
 	border-radius: 5px;
 	color: #fff;
 	cursor: pointer;
@@ -286,18 +224,4 @@ button {
 	font-weight: 600;
 	margin-bottom: 30px;
 	padding: 10px 15px;	
-}
-
-a {
-	border-radius: 5px;
-	color: var(--primary);
-	font-weight: 600;
-	padding: 2px 4px;
-	margin-left: -2px;
-	margin-right: -2px;
-	
-}
-
-.navActive {
-  color: var(--secondary);
 }
