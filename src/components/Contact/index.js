@@ -1,12 +1,29 @@
 import React, {useState} from 'react';
-
+import { validEmail } from '../../utils/helpers';
 
 function ContactForm(){
+    const [error, setError] = useState('')
     const [formState, setFormState] = useState({name:'', email:'', message:''});
     const {name, email, message} = formState;
 
     function handleFormChanges(e){
-        setFormState({...formState, [e.target.name]: e.target.value})
+        if(e.target.name === 'email'){
+            const isValid = validEmail(e.target.value)
+            if(!isValid){
+                setError('Invalid email.')
+            } else {
+                setError('')
+            }
+        } else {
+            if(!e.target.value.length){
+                setError(`${e.target.name} is required!`)
+            } else {
+                setError('')
+            }
+        }
+        if(!error){
+            setFormState({...formState, [e.target.name]: e.target.value})
+        }
     }
     function handleFormSubmit(e){
         e.preventDefault();
@@ -45,7 +62,13 @@ function ContactForm(){
                 <textarea name='message' rows='5' defaultValue={message} placeholder='Message' onChange={handleFormChanges}/>
                 </div>
             </div>
-
+            {error && (
+                <div class='form-group row'>
+                    <div class='col-sm-10'>
+                    <p class='error'>{error}</p>
+                    </div>
+                </div>
+            )}
             <div className="form-group row">
                 <div className="col-sm-10">
                 <button type="submit" className="btn btn-primary">Send</button>

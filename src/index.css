@@ -213,7 +213,6 @@ footer {
   cursor: pointer;
 }
 
-
 button {
 	background: var(--primary) !important;
 	border: none !important;
@@ -224,4 +223,9 @@ button {
 	font-weight: 600;
 	margin-bottom: 30px;
 	padding: 10px 15px;	
+}
+
+.error {
+  color: rgb(221, 62, 62);
+  font-size: 20px;
 }
