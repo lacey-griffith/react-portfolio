@@ -1,31 +1,35 @@
 import React from 'react';
+import NamasteFit from '../../assets/images/namaste_fit.png'
+import NationalPark from '../../assets/images/national_park_finder.png'
+import CodeQuiz from '../../assets/images/code-quiz.png'
+import PasswordGen from '../../assets/images/password_generator.png'
 
 const Projects = () => {
     const projects = [
         {
             name: 'Namaste Fit',
-            image: 'image src',
+            image: NamasteFit,
             description: 'words go here',
             githubLink: 'github link',
             deploymentLink: 'deployment link'
         },
         {
             name: 'National Park Finder',
-            image: 'image src',
+            image: NationalPark,
             description: 'words go here',
             githubLink: 'github link',
             deploymentLink: 'deployment link'
         },
         {
             name: 'Code Quiz',
-            image: 'image src',
+            image: CodeQuiz,
             description: 'words go here',
             githubLink: 'github link',
             deploymentLink: 'deployment link'
         },
         {
             name: 'Password Generator',
-            image: 'image src',
+            image: PasswordGen,
             description: 'words go here',
             githubLink: 'github link',
             deploymentLink: 'deployment link'
@@ -39,7 +43,7 @@ const Projects = () => {
             {projects.map(project => (
                 <div className='card-group col col-sm-auto col-md-auto col-lg-auto mt-3 mb-3 mx-auto align-self-center' key={project.name}>
                 <div className='card results-card col-sm-4 py-2 h-200' style={{"width": "28rem", "height": "36rem"}}>
-                <h5>{project.image}</h5>
+                <img src={project.image} alt='screenshot of application' class='img-thumbnail'/>
                 <div className='card-body'>
                 <h1 className='card-title'>{project.name}</h1>
                 <p className='card-text'>{project.description}</p>
