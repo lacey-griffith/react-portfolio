@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer';
 import profilePicture from "../../assets/images/bioImage.jpg"
 
 const About = () => {
@@ -20,6 +21,7 @@ const About = () => {
                 Elit ex labore sint pariatur ut dolore eu qui ex elit do. Anim deserunt officia ea nisi nulla cupidatat eiusmod ad deserunt.</p>
             </div>
             </div>
+            <div><Footer/></div>
         </section>
     )
 };

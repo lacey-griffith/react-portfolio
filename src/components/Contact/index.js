@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { validEmail } from '../../utils/helpers';
+import Footer from '../Footer';
 
 function ContactForm(){
     const [error, setError] = useState('')
@@ -31,6 +32,7 @@ function ContactForm(){
     }
 
     return(
+        <>
         <section className='my-5'>
             <div className='container h-100 text-center'>
                 <div className='row h-100 justify-content-center align-items-center'>
@@ -45,21 +47,21 @@ function ContactForm(){
             <div className="form-group row">
                 <div className="col-sm-10">
                 <label htmlFor='name' className='d-none'>Name</label>
-                <input type='text' className='form-control' placeholder='Name' defaultValue={name} name='name' size='100' onChange={handleFormChanges}></input>
+                <input type='text' className='form-control' placeholder='Name' defaultValue={name} name='name' size='100' onBlur={handleFormChanges}></input>
                 </div>
             </div>
 
             <div className="form-group row">
                 <div className="col-sm-10">
                 <label htmlFor='email' className='d-none'>Email</label>
-                <input type='text' className="form-control" placeholder='Email' defaultValue={email} name='email' onChange={handleFormChanges}/>
+                <input type='text' className="form-control" placeholder='Email' defaultValue={email} name='email' onBlur={handleFormChanges}/>
                 </div>
             </div>
 
             <div className='form-group row'>
                 <div className='col-sm-10'>
                 <label htmlFor='message' className='d-none'>Message</label>
-                <textarea name='message' rows='5' defaultValue={message} placeholder='Message' onChange={handleFormChanges}/>
+                <textarea name='message' rows='5' defaultValue={message} placeholder='Message' onBlur={handleFormChanges}/>
                 </div>
             </div>
             {error && (
@@ -80,6 +82,8 @@ function ContactForm(){
                 </div>
             </div>
         </section>
+        <Footer/>
+        </>
     )
 }
 

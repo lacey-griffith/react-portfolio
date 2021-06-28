@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer';
 import NamasteFit from '../../assets/images/namaste_fit.png'
 import NationalPark from '../../assets/images/national_park_finder.png'
 import CodeQuiz from '../../assets/images/code-quiz.png'
@@ -37,6 +38,7 @@ const Projects = () => {
     ]
 
     return(
+        <>
         <section>
             <div className='container'>
             <div className='row'>
@@ -56,6 +58,8 @@ const Projects = () => {
             </div>
             </div>
         </section>
+        <Footer/>
+        </>
     )
 }
 
