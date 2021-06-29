@@ -3,7 +3,7 @@ import NavBar from '../NavBar';
 import About from '../AboutMe';
 import Projects from '../Projects';
 import Contact from '../Contact';
-//import Resume from '../Resume'
+import Resume from '../Resume';
 
 function Home(){
     useEffect(() => {
@@ -21,10 +21,10 @@ function Home(){
                 return <Projects/>;
             case 'Contact':
                 return <Contact/>;
-        //     // case 'Resume':
-        //     //     return <Resume/>;
-        default:
-            return
+            case 'Resume':
+                return <Resume/>;
+            // case 'Home':
+            //     return <Home/>;
         }
     }
 
