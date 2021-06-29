@@ -4,7 +4,6 @@ import About from '../AboutMe';
 import Projects from '../Projects';
 import Contact from '../Contact';
 import Resume from '../Resume';
-import background from '../../assets/images/PacMan_AustinGraffiti.jpg'
 
 function Home(){
     useEffect(() => {
@@ -24,22 +23,18 @@ function Home(){
                 return <Contact/>;
             case 'Resume':
                 return <Resume/>;
-            // case 'Home':
-            //     return <Home/>;
+            default:
+                return;
         }
     }
 
     return (
-        <>
     <div> 
         <NavBar currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         <div>
             {writePage(currentPage)}
         </div>
     </div>
-
-    {/* <img src={background} width='75%' alt='Pac Man Graffiti in Austin, Texas'/> */}
-    </>
     )
 };
 

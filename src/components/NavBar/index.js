@@ -4,7 +4,8 @@ function NavBar(props) {
 const navLinks = ['Home', 'About', 'Projects', 'Contact', 'Resume']
 
   return(
-      <ul className='nav justify-content-center'>
+      <nav className='navbar navbar-expand-sm navbar-expand-md navbar-expand-lg justify-content-center'>
+      <ul className='navbar-nav'>
           {navLinks.map(link => (
               <li className='nav-item' 
                 key={link}>
@@ -18,6 +19,7 @@ const navLinks = ['Home', 'About', 'Projects', 'Contact', 'Resume']
               </li>
           ))}
       </ul>
+      </nav>
   )
 };
 

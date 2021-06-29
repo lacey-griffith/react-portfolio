@@ -44,10 +44,10 @@ function ContactForm(){
             <h1 id='about'>let's connect</h1>
             <p>lacey.griffith04@gmail.com</p>
             <div className='row'>
-            <div className='col'><img src={gitHub} alt='GitHub logo'/></div>
-            <div className='col'><img src={linkedIn} alt='LinkedIn logo'/></div>
-            <div className='col'>3</div>
-            <div className='col'>4</div>
+            <div className='col'><a href='https://github.com/lacey-griffith' target='blank'><img src={gitHub} className='img-link-social' alt='GitHub logo'/></a></div>
+            <div className='col'><a href='https://www.linkedin.com/in/lacey-griffith/' target='blank'><img src={linkedIn} className='img-link-social' alt='LinkedIn logo'/></a></div>
+            <div className='col'><a href='/'><img src='' className='img-link-social' alt='logo'/></a></div>
+            <div className='col'><a href='/'><img src='' className='img-link-social' alt='logo'/></a></div>
             </div>
             </div>
 
