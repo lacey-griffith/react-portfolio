@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { validEmail } from '../../utils/helpers';
 import Footer from '../Footer';
+import gitHub from '../../assets/images/GitHub-Mark-64px.png'
+import linkedIn from '../../assets/images/LI-In-Bug.png'
 
 function ContactForm(){
     const [error, setError] = useState('')
@@ -41,6 +43,12 @@ function ContactForm(){
             <div className='p-2'>
             <h1 id='about'>let's connect</h1>
             <p>lacey.griffith04@gmail.com</p>
+            <div className='row'>
+            <div className='col'><img src={gitHub} alt='GitHub logo'/></div>
+            <div className='col'><img src={linkedIn} alt='LinkedIn logo'/></div>
+            <div className='col'>3</div>
+            <div className='col'>4</div>
+            </div>
             </div>
 
             <form id='contact-form' onSubmit={handleFormSubmit}>
