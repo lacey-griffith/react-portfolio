@@ -1,4 +1,6 @@
 import React from 'react';
+
+//nav link images
 import home from '../../assets/images/navImages/home.png'
 import about from '../../assets/images/navImages/about.png'
 import projects from '../../assets/images/navImages/projects.png'
@@ -32,7 +34,8 @@ const navLinks = [
       <nav className='navbar navbar-expand-sm navbar-expand-md navbar-expand-lg justify-content-center'>
       <ul className='navbar-nav'>
           {navLinks.map(link => (
-              <li className='nav-item col-5' 
+              //<Link to={`/${link.navLink.toLowerCase()}'}>{navLink}</Link>
+              <li className='nav-item' 
                 key={link.navLink}>
                 <a 
                 href={'#' + link.navLink.toLowerCase()}

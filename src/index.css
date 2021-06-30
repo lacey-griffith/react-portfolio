@@ -132,11 +132,14 @@ textarea{
 .card-title {
   color: var(--black) !important;
 }
+.card-link {
+  color: #87BFD4 !important
+}
 
 .img-thumbnail {
   width: auto;
   height: 300px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
