@@ -16,7 +16,7 @@ function Resume(){
 </div>
 
 <div className='p-2'>
-<iframe title='Resume' src="https://docs.google.com/document/d/e/2PACX-1vSIA5-jCj4FFwSqoqkzWjagW7btchZTfaNUYOd3ad1dZVA6K1_WNPJov6wvgk_89Ujfbha1b_wPsIaV/pub?embedded=true" width='800px' height='850px'/>
+<iframe title='Resume' className='border' src="https://docs.google.com/document/d/e/2PACX-1vSIA5-jCj4FFwSqoqkzWjagW7btchZTfaNUYOd3ad1dZVA6K1_WNPJov6wvgk_89Ujfbha1b_wPsIaV/pub?embedded=true" width='800px' height='850px'/>
 </div>
 </div>
 <div><Footer/></div>

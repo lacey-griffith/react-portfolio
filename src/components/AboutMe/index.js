@@ -6,16 +6,13 @@ const About = () => {
     return(
         <section className='my-5'>
             <div className='container d-flex flex-column text-center'>
-                <div className='p-2'>
-                <h1 id='about'>A little about me..</h1>
-                </div>
 
                 <div className='p-2'>
-            <img src={profilePicture} className='my-2' alt='profile'></img>
+            <img src={profilePicture} className='my-2 profile-image' alt='profile'></img>
             </div>
 
             <div className='p-2'>
-            <p>
+            <p className='about-me'>
             Nice to meet you! I'm Lacey, currently a student at the University of Texas at Austin following my goals to become a Web Developer. 
             Before this journey, I owned a coffee shop outside of Austin. It was tough, tiring and frustrating. More importantly, it was rewarding. 
             I learned to solve problems, often on the fly. I drank awesome coffee (definitely a perk!) and I met people on all walks of life, 

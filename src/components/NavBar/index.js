@@ -32,12 +32,12 @@ const navLinks = [
       <nav className='navbar navbar-expand-sm navbar-expand-md navbar-expand-lg justify-content-center'>
       <ul className='navbar-nav'>
           {navLinks.map(link => (
-              <li className='nav-item' 
+              <li className='nav-item col-5' 
                 key={link.navLink}>
                 <a 
                 href={'#' + link.navLink.toLowerCase()}
                 onClick={() => props.setCurrentPage(link)}
-                className={ props.currentPage === link ? 'nav-link active' : 'nav-link'}
+                className={ props.currentPage === link ? 'nav-link active nav-image' : 'nav-link nav-image'}
                 >
                     <img src={link.image} alt={link.NavLink}/>
                     {/* {link.navLink} */}

@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import { validEmail } from '../../utils/helpers';
 import Footer from '../Footer';
-import gitHub from '../../assets/images/GitHub-Mark-64px.png'
-import linkedIn from '../../assets/images/LI-In-Bug.png'
-import goodReads from '../../assets/images/goodreads-md.png'
 
 import sendButton from '../../assets/images/navImages/send.png'
 
@@ -16,13 +13,13 @@ function ContactForm(){
         if(e.target.name === 'email'){
             const isValid = validEmail(e.target.value)
             if(!isValid){
-                setError('Invalid email.')
+                setError('that email is invalid!')
             } else {
                 setError('')
             }
         } else {
             if(!e.target.value.length){
-                setError(`${e.target.name} is required!`)
+                setError(`please enter your ${e.target.name}!`)
             } else {
                 setError('')
             }
@@ -46,11 +43,6 @@ function ContactForm(){
             <div className='p-2'>
             <h1 id='about'>let's connect</h1>
             <p>lacey.griffith04@gmail.com <br/> 512.569.6826</p>
-            <div className='row'>
-            <div className='col'><a href='https://github.com/lacey-griffith' target='blank'><img src={gitHub} className='img-link-social' alt='GitHub logo'/></a></div>
-            <div className='col'><a href='https://www.linkedin.com/in/lacey-griffith/' target='blank'><img src={linkedIn} className='img-link-social' alt='LinkedIn logo'/></a></div>
-            <div className='col'><a href='https://www.goodreads.com/user/show/96106934-lacey'><img src={goodReads} className='img-link-social' alt='logo'/></a></div>
-            </div>
             </div>
 
             <form id='contact-form' onSubmit={handleFormSubmit}>
@@ -71,7 +63,7 @@ function ContactForm(){
             <div className='form-group row'>
                 <div className='col-sm-10'>
                 <label htmlFor='message' className='d-none'>Message</label>
-                <textarea name='message' rows='5' defaultValue={message} placeholder='Message' onBlur={handleFormChanges}/>
+                <textarea name='message' className='form-control' rows='5' defaultValue={message} placeholder='Message' onBlur={handleFormChanges}/>
                 </div>
             </div>
             {error && (
