@@ -3,6 +3,9 @@ import { validEmail } from '../../utils/helpers';
 import Footer from '../Footer';
 import gitHub from '../../assets/images/GitHub-Mark-64px.png'
 import linkedIn from '../../assets/images/LI-In-Bug.png'
+import goodReads from '../../assets/images/goodreads-md.png'
+
+import sendButton from '../../assets/images/navImages/send.png'
 
 function ContactForm(){
     const [error, setError] = useState('')
@@ -42,12 +45,11 @@ function ContactForm(){
 
             <div className='p-2'>
             <h1 id='about'>let's connect</h1>
-            <p>lacey.griffith04@gmail.com</p>
+            <p>lacey.griffith04@gmail.com <br/> 512.569.6826</p>
             <div className='row'>
             <div className='col'><a href='https://github.com/lacey-griffith' target='blank'><img src={gitHub} className='img-link-social' alt='GitHub logo'/></a></div>
             <div className='col'><a href='https://www.linkedin.com/in/lacey-griffith/' target='blank'><img src={linkedIn} className='img-link-social' alt='LinkedIn logo'/></a></div>
-            <div className='col'><a href='/'><img src='' className='img-link-social' alt='logo'/></a></div>
-            <div className='col'><a href='/'><img src='' className='img-link-social' alt='logo'/></a></div>
+            <div className='col'><a href='https://www.goodreads.com/user/show/96106934-lacey'><img src={goodReads} className='img-link-social' alt='logo'/></a></div>
             </div>
             </div>
 
@@ -73,15 +75,15 @@ function ContactForm(){
                 </div>
             </div>
             {error && (
-                <div class='form-group row'>
-                    <div class='col-sm-10'>
-                    <p class='error'>{error}</p>
+                <div className='form-group row'>
+                    <div className='col-sm-10'>
+                    <p className='error'>{error}</p>
                     </div>
                 </div>
             )}
             <div className="form-group row">
                 <div className="col-sm-10">
-                <button type="submit" className="btn btn-primary">Send</button>
+                <button type="submit" className="btn"><img src={sendButton} alt='send button' className='sendButton'/></button>
                 </div>
             </div>
             </form>

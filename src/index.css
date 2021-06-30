@@ -4,6 +4,14 @@ main {
   padding: 50px 30px;
 }
 :root {
+  /* 
+  home #8FE3D9
+  about #FF7979
+  projects #D0A0E1
+  contact #87BFD4
+  resume #97C47B
+
+  */
   --background: #bad8e7;
   --header: #bad8e7;
 
@@ -14,6 +22,7 @@ main {
   --light: #7b6d8d;
   --dark:#0e3041 ;
   --darker: #111111;
+  --black: black;
 }
 
 * {
@@ -33,7 +42,7 @@ body {
   font-size: 18px;
   letter-spacing: .1em;
   background: var(--background);
-  color: var(--light);
+  color: var(--black);
   font-family: Arial, Helvetica, sans-serif;
   background-image:url('./assets/images/brickwall.png');
   background-size: auto;
@@ -49,6 +58,10 @@ body {
 p {
   font-size: 1.1rem;
   margin-top: 0;
+  color: black !important;
+}
+h1 {
+  color: black !important;
 }
 
 a {
@@ -178,6 +191,9 @@ textarea {
   width: 25%;
   text-align: center;
 }
+.card-title {
+  color: var(--black) !important;
+}
 
 .img-thumbnail {
   width: auto;
@@ -186,7 +202,7 @@ textarea {
   cursor: pointer;
 }
 
-button {
+/* button {
 	background: var(--primary) !important;
 	border: none !important;
 	border-radius: 5px;
@@ -196,6 +212,10 @@ button {
 	font-weight: 600;
 	margin-bottom: 30px;
 	padding: 10px 15px;	
+} */
+
+.sendButton {
+ width: 70%;
 }
 
 .error {

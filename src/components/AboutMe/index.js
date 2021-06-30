@@ -15,10 +15,17 @@ const About = () => {
             </div>
 
             <div className='p-2'>
-            <p>Ea aliqua dolor consequat exercitation excepteur quis veniam officia veniam sint. 
-                Pariatur fugiat esse ut culpa velit irure occaecat id eiusmod minim proident ullamco nostrud magna. 
-                Deserunt magna nostrud pariatur occaecat incididunt anim. Fugiat dolore qui est labore. Adipisicing magna cillum elit ad occaecat. 
-                Elit ex labore sint pariatur ut dolore eu qui ex elit do. Anim deserunt officia ea nisi nulla cupidatat eiusmod ad deserunt.</p>
+            <p>
+            Nice to meet you! I'm Lacey, currently a student at the University of Texas at Austin following my goals to become a Web Developer. 
+            Before this journey, I owned a coffee shop outside of Austin. It was tough, tiring and frustrating. More importantly, it was rewarding. 
+            I learned to solve problems, often on the fly. I drank awesome coffee (definitely a perk!) and I met people on all walks of life, 
+            which taught me the value in human connection. I experienced the importance of communication, persistence and clarity. 
+            I learned that you can start something new and be pretty bad at it but every day you'll get better if you commit the time to it.
+
+            <br/><br/>
+            When I'm not working on code or design, I'm typically cooking or outside with my son and dog. 
+            I love reading, music, photography and making lists! I am an INFJ actively trying to understand the ways of extroverts. 
+            </p>
             </div>
             </div>
             <div><Footer/></div>

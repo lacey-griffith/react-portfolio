@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from '../Footer';
+
 import NamasteFit from '../../assets/images/namaste_fit.png'
 import NationalPark from '../../assets/images/national_park_finder.png'
 import CodeQuiz from '../../assets/images/code-quiz.png'
@@ -45,7 +46,7 @@ const Projects = () => {
             {projects.map(project => (
                 <div className='card-group col col-sm-auto col-md-auto col-lg-auto mt-3 mb-3 mx-auto align-self-center' key={project.name}>
                 <div className='card results-card col-sm-4 py-2 h-200' style={{"width": "26rem", "height": "38rem"}}>
-                <img src={project.image} alt='screenshot of application' class='img-thumbnail'/>
+                <img src={project.image} alt='screenshot of application' className='img-thumbnail'/>
                 <div className='card-body'>
                 <h2 className='card-title'>{project.name}</h2>
                 <p className='card-text'>{project.description}</p>
