@@ -9,7 +9,10 @@ function ContactForm(){
     const [formState, setFormState] = useState({name:'', email:'', message:''});
     const {name, email, message} = formState;
 
+    const [charCount, setCharCount] = useState(0)
+
     function handleFormChanges(e){
+        console.log(e.target.name)
         if(e.target.name === 'email'){
             const isValid = validEmail(e.target.value)
             if(!isValid){
@@ -28,11 +31,17 @@ function ContactForm(){
             setFormState({...formState, [e.target.name]: e.target.value})
         }
     }
+
     function handleFormSubmit(e){
         e.preventDefault();
         console.log(formState)
     }
-
+    function characterCount(e){
+        if(e.target.name === 'message'){
+            setCharCount(e.target.value.length)
+            console.log((280 - charCount))
+        }
+    }
     return(
         <>
         <section className='my-5'>
@@ -44,7 +53,13 @@ function ContactForm(){
             <h1 id='about'>let's connect</h1>
             <p>lacey.griffith04@gmail.com <br/> 512.569.6826</p>
             </div>
-
+            {error && (
+                <div className='form-group row justify-content-center'>
+                    <div className='col-sm-10'>
+                    <p className='error'>{error}</p>
+                    </div>
+                </div>
+            )}
             <form id='contact-form' onSubmit={handleFormSubmit}>
             <div className="form-group row">
                 <div className="col-sm-10">
@@ -63,16 +78,10 @@ function ContactForm(){
             <div className='form-group row'>
                 <div className='col-sm-10'>
                 <label htmlFor='message' className='d-none'>Message</label>
-                <textarea name='message' className='form-control' rows='5' defaultValue={message} placeholder='Message' onBlur={handleFormChanges}/>
+                <textarea name='message' className='form-control' rows='5' defaultValue={message} placeholder='Message' onBlur={handleFormChanges} onChange={characterCount}/>
+                <p class={`fw-light fs-6 ${charCount >= 280 ? 'error' : ''}`}>Characters left: {280 - charCount}</p>
                 </div>
             </div>
-            {error && (
-                <div className='form-group row'>
-                    <div className='col-sm-10'>
-                    <p className='error'>{error}</p>
-                    </div>
-                </div>
-            )}
             <div className="form-group row">
                 <div className="col-sm-10">
                 <button type="submit" className="btn"><img src={sendButton} alt='send button' className='sendButton'/></button>
