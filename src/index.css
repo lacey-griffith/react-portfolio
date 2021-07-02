@@ -12,7 +12,7 @@ contact #87BFD4
 resume #97C47B
 */
 :root {
-  --background: #bad8e7;
+  --background: #fff;
 }
 
 * {
@@ -149,4 +149,31 @@ textarea{
 
 .error {
   color: red !important;
+}
+
+.img-collapse {
+  max-width: 90%;
+  width: 90%;
+  height: auto !important;
+}
+
+.navbar-nav {
+  margin:0 auto;
+  text-align: center;
+}
+
+.navbar-nav > li {
+  display: inline-block;
+  float:none;
+}
+
+@media screen and (max-width: 768px) {
+  .img-collapse {
+    max-width: 50%;
+    width: 30%;
+    height: auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }

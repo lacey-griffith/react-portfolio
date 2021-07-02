@@ -8,6 +8,7 @@ import contact from '../../assets/images/navImages/contact.png'
 import resume from '../../assets/images/navImages/resume.png'
 
 function NavBar(props) {
+
 const navLinks = [
     // {
     //     navLink: 'Home',
@@ -31,11 +32,15 @@ const navLinks = [
     }]
 
   return(
-      <header>
-      <nav className='navbar navbar-expand-sm navbar-expand-md navbar-expand-lg justify-content-center'>
-      <ul className='navbar-nav'>
+        <header>
+        <nav className="navbar navbar-nav navbar-expand-md navbar-expand-lg navbar-light text-center">
+            <div className="container-fluid justify-content-center text-center">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+                </button>
+            <div className="collapse navbar-collapse" data-parent="#selector" id="navbarToggler">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           {navLinks.map(link => (
-              //<Link to={`/${link.navLink.toLowerCase()}'}>{navLink}</Link>
               <li className='nav-item' 
                 key={link.navLink}>
                 <a 
@@ -43,14 +48,15 @@ const navLinks = [
                 onClick={() => props.setCurrentPage(link)}
                 className={ props.currentPage === link ? 'nav-link active nav-image' : 'nav-link nav-image'}
                 >
-                    <img src={link.image} alt={link.NavLink}/>
-                    {/* {link.navLink} */}
+                    <img src={link.image} alt={link.NavLink} className='img-collapse'/>
                     </a>
               </li>
-          ))}
-      </ul>
-      </nav>
-      </header>
+              ))}
+                </ul>
+                </div>
+            </div>
+        </nav>
+        </header>
   )
 };
 
