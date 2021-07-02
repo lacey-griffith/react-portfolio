@@ -16,13 +16,13 @@ function ContactForm(){
         if(e.target.name === 'email'){
             const isValid = validEmail(e.target.value)
             if(!isValid){
-                setError('that email is invalid!')
+                setError('A valid email is required!')
             } else {
                 setError('')
             }
         } else {
             if(!e.target.value.length){
-                setError(`please enter your ${e.target.name}!`)
+                setError(`Your ${e.target.name} is required!`)
             } else {
                 setError('')
             }
@@ -66,21 +66,21 @@ function ContactForm(){
             <div className="form-group row">
                 <div className="col-sm-10">
                 <label htmlFor='name' className='d-none'>Name</label>
-                <input type='text' className='form-control' placeholder='Name' defaultValue={name} name='name' size='100' onBlur={handleFormChanges}></input>
+                <input type='text' className='form-control' placeholder='Name' defaultValue={name} name='name' size='100' onMouseLeave={handleFormChanges}></input>
                 </div>
             </div>
 
             <div className="form-group row">
                 <div className="col-sm-10">
                 <label htmlFor='email' className='d-none'>Email</label>
-                <input type='text' className="form-control" placeholder='Email' defaultValue={email} name='email' onBlur={handleFormChanges}/>
+                <input type='text' className="form-control" placeholder='Email' defaultValue={email} name='email' onMouseLeave={handleFormChanges}/>
                 </div>
             </div>
 
             <div className='form-group row'>
                 <div className='col-sm-10'>
                 <label htmlFor='message' className='d-none'>Message</label>
-                <textarea name='message' className='form-control' rows='5' defaultValue={message} placeholder='Message' onBlur={handleFormChanges} onChange={characterCount}/>
+                <textarea name='message' className='form-control' rows='5' defaultValue={message} placeholder='Message' onMouseLeave={handleFormChanges} onChange={characterCount}/>
                 <p className={`fw-light fs-6 ${charCount >= 280 ? 'error' : ''}`}>Characters left: {280 - charCount}</p>
                 </div>
             </div>

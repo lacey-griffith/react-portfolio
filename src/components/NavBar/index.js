@@ -31,6 +31,7 @@ const navLinks = [
     }]
 
   return(
+      <header>
       <nav className='navbar navbar-expand-sm navbar-expand-md navbar-expand-lg justify-content-center'>
       <ul className='navbar-nav'>
           {navLinks.map(link => (
@@ -49,6 +50,7 @@ const navLinks = [
           ))}
       </ul>
       </nav>
+      </header>
   )
 };
 
