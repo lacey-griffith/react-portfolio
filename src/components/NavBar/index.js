@@ -1,7 +1,7 @@
 import React from 'react';
 
 //nav link images
-import home from '../../assets/images/navImages/home.png'
+//import home from '../../assets/images/navImages/home.png'
 import about from '../../assets/images/navImages/about.png'
 import projects from '../../assets/images/navImages/projects.png'
 import contact from '../../assets/images/navImages/contact.png'
@@ -9,10 +9,10 @@ import resume from '../../assets/images/navImages/resume.png'
 
 function NavBar(props) {
 const navLinks = [
-    {
-        navLink: 'Home',
-        image: home
-    }, 
+    // {
+    //     navLink: 'Home',
+    //     image: home
+    // }, 
     {
         navLink: 'About',
         image: about

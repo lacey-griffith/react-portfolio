@@ -12,7 +12,7 @@ function ContactForm(){
     const [charCount, setCharCount] = useState(0)
 
     function handleFormChanges(e){
-        console.log(e.target.name)
+
         if(e.target.name === 'email'){
             const isValid = validEmail(e.target.value)
             if(!isValid){
@@ -35,11 +35,13 @@ function ContactForm(){
     function handleFormSubmit(e){
         e.preventDefault();
         console.log(formState)
+        setCharCount(0)
+        setFormState({name:'', email:'', message:''})
     }
+
     function characterCount(e){
         if(e.target.name === 'message'){
             setCharCount(e.target.value.length)
-            console.log((280 - charCount))
         }
     }
     return(
@@ -79,7 +81,7 @@ function ContactForm(){
                 <div className='col-sm-10'>
                 <label htmlFor='message' className='d-none'>Message</label>
                 <textarea name='message' className='form-control' rows='5' defaultValue={message} placeholder='Message' onBlur={handleFormChanges} onChange={characterCount}/>
-                <p class={`fw-light fs-6 ${charCount >= 280 ? 'error' : ''}`}>Characters left: {280 - charCount}</p>
+                <p className={`fw-light fs-6 ${charCount >= 280 ? 'error' : ''}`}>Characters left: {280 - charCount}</p>
                 </div>
             </div>
             <div className="form-group row">

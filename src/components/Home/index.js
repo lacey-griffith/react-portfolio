@@ -7,17 +7,16 @@ import Resume from '../Resume';
 
 function Home(){
     useEffect(() => {
-        if(currentPage === 'Home'){
+        if(currentPage === 'About'){
             document.title = currentPage
         } else {
             document.title = currentPage.navLink
         }
     });
 
-    const [currentPage, setCurrentPage] = useState('Home');
+    const [currentPage, setCurrentPage] = useState('About');
 
     const writePage = (currentPage) => {
-        console.log(currentPage.navLink)
         switch(currentPage.navLink){
             case 'About':
                 return <About/>;
@@ -28,7 +27,7 @@ function Home(){
             case 'Resume':
                 return <Resume/>;
             default:
-                return;
+                return <About/>;
         }
     }
 
