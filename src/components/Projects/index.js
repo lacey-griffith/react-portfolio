@@ -133,7 +133,7 @@ const Projects = () => {
             <div className='container'>
             <div className='row'>
             {projects.map(project => (
-                <div className='card-group col col-sm-auto col-md-auto col-lg-auto mt-3 mb-3 mx-auto align-self-center' key={project.name}>
+                <div className='card-group col col-sm-12 col-md-6 col-lg-6 mt-3 mb-3 mx-auto align-self-center' key={project.name}>
                 <div className='card results-card col-sm-4 py-2 border-secondary' style={{"width": "26rem", "height": "70rem"}}>
                 <a href={project.deploymentLink} className='card-link' target='blank'><img src={project.image} alt='screenshot of application' className='img-thumbnail card-img-top'/></a>
                 <div className='card-body'>

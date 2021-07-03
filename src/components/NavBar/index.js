@@ -47,6 +47,7 @@ const navLinks = [
                 href={'#' + link.navLink.toLowerCase()}
                 onClick={() => props.setCurrentPage(link)}
                 className={ props.currentPage === link ? 'nav-link active nav-image' : 'nav-link nav-image'}
+                data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
                 >
                     <img src={link.image} alt={link.NavLink} className='img-collapse'/>
                     </a>
