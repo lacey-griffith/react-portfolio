@@ -23,12 +23,20 @@ You can also visit my GitHub profile by clicking [here](https://github.com/lacey
 
 ## Site Images
 Examples of full size page rendering:
+
 ![Site Image](./src/assets/site_images/about_full.png)
+
 ![Site Image](./src/assets/site_images/projects_full.png)
+
 ![Site Image](./src/assets/site_images/contact_full.png)
+
 ![Site Image](./src/assets/site_images/resume_full.png)
 
 Examples of mobile view of pages:
+
 ![Site Image](./src/assets/site_images/about_mobile.png)
+
 ![Site Image](./src/assets/site_images/projects_mobile.png)
+
 ![Site Image](./src/assets/site_images/contact_mobile.png)
+
