@@ -7,6 +7,7 @@ import CodeQuiz from '../../assets/images/code-quiz.png'
 import PasswordGen from '../../assets/images/password_generator.png'
 import BudgetTracker from '../../assets/images/budget_tracker.png'
 import TechBlog from '../../assets/images/tech_blog.png'
+import FlowerShop from '../../assets/images/flower_shop.png'
 
 const Projects = () => {
     const tech = [
@@ -23,7 +24,7 @@ const Projects = () => {
             id: 2
         },
         {
-            language: 'Foundations',
+            language: 'React',
             id: 3
         },
         {
@@ -73,17 +74,32 @@ const Projects = () => {
         {
             language: 'MySQL2',
             id: 15
+        },
+        {
+            language: 'GraphQL',
+            id: 16
+        },{
+            language: 'Node.js',
+            id: 17
         }
     ]
 
     const projects = [
+        {
+            name: 'Flower Shop',
+            image: FlowerShop,
+            description: 'Flower Shop was created to enhance the online shopping experience for users wanting to purchase and send flowers to friends or loved ones. We combined simplicity with effeciency and the result is a user friendly, information driven, e-commerce flower shop. Users can browse by occasion, find details on products, add and remove items from their cart quickly and checkout seamlessly.',
+            githubLink: 'https://github.com/hbbc248/the-flower-store',
+            deploymentLink: 'https://flower-shop-project-3.herokuapp.com/',
+            techUsed: [tech[0], tech[1], tech[2], tech[3], tech[4], tech[11], tech[12], tech[13], tech[14], tech[16], tech[17]]
+        },
         {
             name: 'Namaste Fit',
             image: NamasteFit,
             description: 'This application allows yoga enthusiasts to learn more about yoga poses. Our motivation for developing Namaste Fit is to improve the experiences surrounding yoga, personal journeys and education. Created by a team of 4, it is our first full stack application. We implemented Handlebars.js with little experience and successfully connected our backend database with our frontend functionality.',
             githubLink: 'https://github.com/lacey-griffith/yoga',
             deploymentLink: 'https://yoga-finish.herokuapp.com/',
-            techUsed: [tech[0], tech[1], tech[2], tech[3], tech[4], tech[5], tech[6], tech[8], tech[11], tech[10], tech[15]]
+            techUsed: [tech[0], tech[1], tech[2], tech[4], tech[5], tech[6], tech[8], tech[11], tech[10], tech[15]]
         },
         {
             name: 'National Park Finder',
