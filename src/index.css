@@ -164,11 +164,19 @@ textarea{
 
 @media screen and (max-width: 768px) {
   .img-collapse {
-    max-width: 50%;
-    width: 30%;
+    max-width: 70%;
+    width: 100%;
     height: auto !important;
-    display: flex;
-    flex-wrap: wrap;
+  }
+  .navbar-nav {
     flex-direction: row;
+    justify-content: center; 
+  }
+  .nav li {
+    text-align: center;
+  }
+
+  .card-group .card {
+    box-shadow: 10px 8px 3px 1px rgb(0 0 0 / 20%); 
   }
 }
