@@ -15,26 +15,26 @@ const navLinks = [
     //     image: home
     // }, 
     {
-        navLink: 'About',
+        navLink: 'about',
         image: about
     },
     {
-        navLink: 'Projects',
+        navLink: 'projects',
         image: projects
     },
     {
-        navLink: 'Contact',
+        navLink: 'contact',
         image: contact
     },
     {
-        navLink: 'Resume',
+        navLink: 'resume',
         image: resume
     }]
 
   return(
         <header>
         <nav className="navbar navbar-nav navbar-expand-md navbar-expand-lg navbar-light text-center">
-            <div className="container-fluid justify-content-center text-center">
+            <div className="container-fluid text-center">
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
