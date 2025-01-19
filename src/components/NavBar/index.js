@@ -15,21 +15,24 @@ const navLinks = [
     //     image: home
     // }, 
     {
-        navLink: 'about',
+        navLink: 'About',
         image: about
     },
     {
-        navLink: 'projects',
+        navLink: 'Projects',
         image: projects
     },
     {
-        navLink: 'contact',
+        navLink: 'Contact',
         image: contact
     },
     {
-        navLink: 'resume',
+        navLink: 'Resume',
         image: resume
-    }]
+    }];
+
+    console.log(navLinks);
+    console.log(props)
 
   return(
         <header>
@@ -40,19 +43,20 @@ const navLinks = [
                 </button>
             <div className="collapse navbar-collapse" data-parent="#selector" id="navbarToggler">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          {navLinks.map(link => (
-              <li className='nav-item' 
-                key={link.navLink}>
-                <a 
-                href={'#' + link.navLink.toLowerCase()}
-                onClick={() => props.setCurrentPage(link)}
-                className={ props.currentPage === link ? 'nav-link active nav-image' : 'nav-link nav-image'}
-                data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                >
-                     {link.navLink}
-                    </a>
-              </li>
-              ))}
+                {navLinks.map(link => (
+                    <li className='nav-item' 
+                        key={link.navLink}>
+                            <a 
+                            href={'#' + link.navLink.toLowerCase()}
+                            onClick={() => props.setCurrentPage(link.navLink)}
+                            className={ props.currentPage === link.navLink ? 'nav-link active' : 'nav-link'}
+                            data-bs-toggle="collapse" 
+                            data-bs-target=".navbar-collapse.show"
+                            >
+                                {link.navLink}
+                            </a>
+                    </li>
+                    ))}
                 </ul>
                 </div>
             </div>
