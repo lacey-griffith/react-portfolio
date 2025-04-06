@@ -4,7 +4,7 @@ import Footer from '../Footer';
 
 import sendButton from '../../assets/images/navImages/send.png'
 
-function ContactForm(){
+const ContactForm = () => {
     const [error, setError] = useState('')
     const [formState, setFormState] = useState({name:'', email:'', message:''});
     const {name, email, message} = formState;

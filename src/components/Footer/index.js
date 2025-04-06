@@ -3,8 +3,6 @@ import gitHub from '../../assets/images/GitHub-Mark-64px.png'
 import linkedIn from '../../assets/images/LI-In-Bug.png'
 import goodReads from '../../assets/images/goodreads-md.png'
 
-
-
 const Footer = () => {
     return(
     <section className='footer'>

@@ -1,3 +1,4 @@
+import Routes from './Routes';
 import React from 'react';
 import Home from './components/Home';
 
@@ -5,7 +6,13 @@ import './App.css';
 import './index.css'
 
 function App() {
-    return(<Home/>)
+    //const [currentPage, setCurrentPage] = useState('Home');
+
+    return (
+        <div>
+            <Routes />
+        </div>
+    )
 }
 
 export default App;

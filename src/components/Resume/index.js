@@ -1,13 +1,9 @@
 import React from 'react';
 import Footer from '../Footer';
 
-function Resume(){
+const Resume = () => {
 
     return(
-  
-  
-
-
 <section className='my-5'>
 <div className='container d-flex flex-column text-center'>
     <div className='p-2'>

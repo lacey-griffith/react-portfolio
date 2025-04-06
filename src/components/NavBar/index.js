@@ -1,29 +1,20 @@
 import React from 'react';
 
 //nav link images
-//import home from '../../assets/images/navImages/home.png'
+import home from '../../assets/images/navImages/home.png'
 import about from '../../assets/images/navImages/about.png'
 import projects from '../../assets/images/navImages/projects.png'
 import contact from '../../assets/images/navImages/contact.png'
 import resume from '../../assets/images/navImages/resume.png'
 
-function NavBar(props) {
-
-    const navLinks = [
-        // {
-        //     navLink: 'Home',
-        //     image: home
-        // }, 
+const NavBar = (props) => {
+    const navLinks = [ 
         {
-            navLink: 'About',
-            image: about
+            navLink: 'Home',
+            image: home
         },
         {
             navLink: 'Projects',
-            image: projects
-        },
-        {
-            navLink: 'Home',
             image: projects
         },
         {
@@ -35,15 +26,12 @@ function NavBar(props) {
             image: resume
         }];
 
-    console.log(navLinks);
-    console.log(props)
-
     return (
         <header>
             <nav className="navbar navbar-nav navbar-expand-md navbar-expand-lg navbar-light text-center">
                 <div className="container-fluid text-center">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
                             <path d="M2.994 19.996h-.002c.031.791.267.979.954.999 1.241.013 15.514 0 
                             16.098-.009.679-.022.92-.269.96-.943 0 0-11.384.036-18.01-.047zm3.791-3.992l-3.779-.008c-.585.008-.98.453-1.005.947-.026.523.354 
                             1.033 1.005 1.053h18.008c.645-.034 1.01-.539.985-1.053-.027-.49-.438-.92-.999-.943-1.3-.016-6.41.003-6.554.004-.522.003-.988.277-1.296.459-.89.522-1.587 
@@ -69,7 +57,7 @@ function NavBar(props) {
                                 <li className='nav-item'
                                     key={link.navLink}>
                                     <a
-                                        href={'#' + link.navLink.toLowerCase()}
+                                        href={'/' + link.navLink.toLowerCase()}
                                         onClick={() => props.setCurrentPage(link.navLink)}
                                         className={props.currentPage === link.navLink ? 'nav-link active' : 'nav-link'}
                                         data-bs-toggle="collapse"
@@ -81,8 +69,10 @@ function NavBar(props) {
                             ))}
                         </ul>
                     </div>
+                    {/*
                     <div>Test</div>
                     <div>Test 2</div>
+                    */}
                 </div>
             </nav>
         </header>
